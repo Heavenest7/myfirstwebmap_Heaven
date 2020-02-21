@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> My first Leaflet map </title>
+	  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+	  <link rel="stylesheet" href="main.css"/>
+    </head>
+	<body>
+		<H1>Example First Web Page </H1>
+				<p>I can do this </p>
+		<div id="map"></div>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+		<script>
+			//initialize the map         
+			var map = L.map('map').setView([51.9741, 5.6688], 15);
+
+			//Create baselayer - tiles         
+			var backgroundMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+			});
+			backgroundMap.addTo(map);
+	
+		</script>
+	</body>
+</html>
